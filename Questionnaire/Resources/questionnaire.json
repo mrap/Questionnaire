@@ -1,0 +1,49 @@
+{
+  "fields": [
+    {
+      "type": "text",
+      "prompt": "My name is"
+    },
+    {
+      "type": "date",
+      "prompt": "My birthday is"
+    },
+    {
+      "type": "choice",
+      "prompt": "My favorite Ninja Turtle is...",
+      "options": {
+        "multi": false
+      },
+      "choices": [
+        "Leonardo",
+        "Raphael",
+        "Michelangelo",
+        "Donatello",
+        "What's a Ninja Turtle?"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "If I had to spend one day on vacation, I would visit ...",
+      "options": {
+        "multi": false,
+        "dropdown": true
+      },
+      "choices": [
+        "the beach",
+        "a spa",
+        "a landmark",
+        "the mall",
+        "a famous restaurant"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "I've shipped code in written in",
+      "options": {
+        "multi": true
+      },
+      "choices": ["Golang", "Java", "JavaScript", "Python", "Swift"]
+    }
+  ]
+}

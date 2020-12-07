@@ -13,6 +13,12 @@
 		A99677B4257C393C00E1281A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A99677B3257C393C00E1281A /* Preview Assets.xcassets */; };
 		A99677BF257C393D00E1281A /* QuestionnaireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99677BE257C393D00E1281A /* QuestionnaireTests.swift */; };
 		A99677CA257C393D00E1281A /* QuestionnaireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99677C9257C393D00E1281A /* QuestionnaireUITests.swift */; };
+		A99677E6257C4A3B00E1281A /* Questionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99677E5257C4A3B00E1281A /* Questionnaire.swift */; };
+		A99677F4257C4AF500E1281A /* questionnaire.json in Resources */ = {isa = PBXBuildFile; fileRef = A99677F3257C4AF500E1281A /* questionnaire.json */; };
+		A99677FD257C4B7E00E1281A /* FieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99677FC257C4B7E00E1281A /* FieldRow.swift */; };
+		A9967805257C4B9C00E1281A /* QuestionnaireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9967804257C4B9C00E1281A /* QuestionnaireView.swift */; };
+		A996780A257C4BDC00E1281A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9967809257C4BDC00E1281A /* Data.swift */; };
+		A9B97F18257ED36E00992F0E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B97F17257ED36E00992F0E /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,12 @@
 		A99677C5257C393D00E1281A /* QuestionnaireUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestionnaireUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99677C9257C393D00E1281A /* QuestionnaireUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireUITests.swift; sourceTree = "<group>"; };
 		A99677CB257C393D00E1281A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A99677E5257C4A3B00E1281A /* Questionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questionnaire.swift; sourceTree = "<group>"; };
+		A99677F3257C4AF500E1281A /* questionnaire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questionnaire.json; sourceTree = "<group>"; };
+		A99677FC257C4B7E00E1281A /* FieldRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldRow.swift; sourceTree = "<group>"; };
+		A9967804257C4B9C00E1281A /* QuestionnaireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireView.swift; sourceTree = "<group>"; };
+		A9967809257C4BDC00E1281A /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		A9B97F17257ED36E00992F0E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +109,12 @@
 			children = (
 				A99677AC257C393B00E1281A /* QuestionnaireApp.swift */,
 				A99677AE257C393B00E1281A /* ContentView.swift */,
+				A9B97F17257ED36E00992F0E /* UserData.swift */,
+				A99677FB257C4B6D00E1281A /* Views */,
+				A99677E4257C4A1600E1281A /* Models */,
 				A99677B0257C393C00E1281A /* Assets.xcassets */,
 				A99677B5257C393C00E1281A /* Info.plist */,
+				A99677ED257C4A8E00E1281A /* Resources */,
 				A99677B2257C393C00E1281A /* Preview Content */,
 			);
 			path = Questionnaire;
@@ -128,6 +144,32 @@
 				A99677CB257C393D00E1281A /* Info.plist */,
 			);
 			path = QuestionnaireUITests;
+			sourceTree = "<group>";
+		};
+		A99677E4257C4A1600E1281A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A99677E5257C4A3B00E1281A /* Questionnaire.swift */,
+				A9967809257C4BDC00E1281A /* Data.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A99677ED257C4A8E00E1281A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A99677F3257C4AF500E1281A /* questionnaire.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A99677FB257C4B6D00E1281A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A99677FC257C4B7E00E1281A /* FieldRow.swift */,
+				A9967804257C4B9C00E1281A /* QuestionnaireView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A99677B4257C393C00E1281A /* Preview Assets.xcassets in Resources */,
+				A99677F4257C4AF500E1281A /* questionnaire.json in Resources */,
 				A99677B1257C393C00E1281A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +303,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A99677AF257C393B00E1281A /* ContentView.swift in Sources */,
+				A996780A257C4BDC00E1281A /* Data.swift in Sources */,
+				A9B97F18257ED36E00992F0E /* UserData.swift in Sources */,
+				A99677FD257C4B7E00E1281A /* FieldRow.swift in Sources */,
 				A99677AD257C393B00E1281A /* QuestionnaireApp.swift in Sources */,
+				A9967805257C4B9C00E1281A /* QuestionnaireView.swift in Sources */,
+				A99677E6257C4A3B00E1281A /* Questionnaire.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
