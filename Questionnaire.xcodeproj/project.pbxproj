@@ -19,6 +19,7 @@
 		A9967805257C4B9C00E1281A /* QuestionnaireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9967804257C4B9C00E1281A /* QuestionnaireView.swift */; };
 		A996780A257C4BDC00E1281A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9967809257C4BDC00E1281A /* Data.swift */; };
 		A9B97F18257ED36E00992F0E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B97F17257ED36E00992F0E /* UserData.swift */; };
+		A9B97F1D257ED72A00992F0E /* FieldTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B97F1C257ED72A00992F0E /* FieldTextInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		A9967804257C4B9C00E1281A /* QuestionnaireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireView.swift; sourceTree = "<group>"; };
 		A9967809257C4BDC00E1281A /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		A9B97F17257ED36E00992F0E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		A9B97F1C257ED72A00992F0E /* FieldTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTextInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				A99677FC257C4B7E00E1281A /* FieldRow.swift */,
+				A9B97F1C257ED72A00992F0E /* FieldTextInput.swift */,
 				A9967804257C4B9C00E1281A /* QuestionnaireView.swift */,
 			);
 			path = Views;
@@ -302,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9B97F1D257ED72A00992F0E /* FieldTextInput.swift in Sources */,
 				A99677AF257C393B00E1281A /* ContentView.swift in Sources */,
 				A996780A257C4BDC00E1281A /* Data.swift in Sources */,
 				A9B97F18257ED36E00992F0E /* UserData.swift in Sources */,

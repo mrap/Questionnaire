@@ -11,7 +11,7 @@ import SwiftUI
 struct QuestionnaireApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            QuestionnaireView().environmentObject(UserData())
         }
     }
 }
