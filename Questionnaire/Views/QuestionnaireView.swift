@@ -16,7 +16,7 @@ struct QuestionnaireView: View {
     
     var body: some View {
         List(self.activeQuestionnaire.fields.indices, id: \.self) { index in
-            FieldRow(field: self.activeQuestionnaire.fields[index])
+            FieldRow(field: self.$userData.activeQuestionnaire.fields[index])
         }
     }
 }

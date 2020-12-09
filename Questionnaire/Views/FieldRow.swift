@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct FieldRow: View {
-    var field: Field
-    
-    var body: some View {
-        Text(field.prompt)
-    }
-}
+    @Binding var field: Field
 
-struct FieldRow_Previews: PreviewProvider {
-    static var previews: some View {
-        FieldRow(field: mainQuestionnaire.fields[0])
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(field.prompt)
+            switch field.type {
+            case "text":
+                FieldTextInput(placeholder: field.options?.placeholder ?? "", value: $field.value)
+            default:
+                EmptyView()
+            }
+            
+        }
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 // MARK: - Questionnaire
 class Questionnaire: Codable, ObservableObject {
     @Published var id: Int?
-    @Published var fields: [Field]
+    @Published var fields: [Field] = []
     
     init(id: Int, fields: [Field]) {
         self.id = id
@@ -48,18 +48,20 @@ class Field: Codable, ObservableObject {
     @Published var prompt: String
     @Published var options: Options?
     @Published var choices: [String]?
+    @Published var value: String
     @Published var values: [String]?
-    
-    init(type: String, prompt: String, options: Options?, choices: [String]?, values: [String]?) {
+
+    init(type: String, prompt: String, options: Options?, choices: [String]?, value: String, values: [String]?) {
         self.type = type
         self.prompt = prompt
         self.options = options
         self.choices = choices
+        self.value = value
         self.values = values
     }
     
     enum CodingKeys: CodingKey {
-        case type, prompt, options, choices, values
+        case type, prompt, options, choices, value, values
     }
     
     func encode(to encoder: Encoder) throws {
@@ -67,13 +69,15 @@ class Field: Codable, ObservableObject {
 
         try container.encode(type, forKey: .type)
         try container.encode(prompt, forKey: .prompt)
-        
+        try container.encode(value, forKey: .value)
+
         if options != nil {
             try container.encode(options, forKey: .options)
         }
         if choices != nil {
             try container.encode(choices, forKey: .choices)
         }
+        
         if values != nil {
             try container.encode(values, forKey: .values)
         }
@@ -95,6 +99,12 @@ class Field: Codable, ObservableObject {
             choices = try container.decode([String].self, forKey: .choices)
         } else {
             choices = nil
+        }
+        
+        if container.contains(.value) {
+            value = try container.decode(String.self, forKey: .value)
+        } else {
+            value = ""
         }
         
         if container.contains(.values) {

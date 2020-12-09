@@ -10,7 +10,7 @@ import SwiftUI
 struct FieldTextInput: View {
     var placeholder: String
     @Binding var value: String
-
+    
     var body: some View {
         TextField(placeholder, text: $value)
     }
