@@ -16,6 +16,8 @@ struct FieldRow: View {
             switch field.type {
             case "text":
                 FieldTextInput(placeholder: field.options?.placeholder ?? "", value: $field.value)
+            case "date":
+                DatePickerInput(date: $field.date)
             default:
                 EmptyView()
             }
