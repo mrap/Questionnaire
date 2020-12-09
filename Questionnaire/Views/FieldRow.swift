@@ -18,6 +18,10 @@ struct FieldRow: View {
                 FieldTextInput(placeholder: field.options?.placeholder ?? "", value: $field.value)
             case "date":
                 DatePickerInput(date: $field.date)
+            case "choice":
+                if !(field.options?.multi ?? false) {
+                    Choices(chosen: $field.chosen[0], choices: $field.choices)
+                }
             default:
                 EmptyView()
             }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A9144E75258081F000767B9E /* DatePickerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9144E74258081F000767B9E /* DatePickerInput.swift */; };
+		A9144E7A2580875C00767B9E /* Choices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9144E792580875C00767B9E /* Choices.swift */; };
 		A99677AD257C393B00E1281A /* QuestionnaireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99677AC257C393B00E1281A /* QuestionnaireApp.swift */; };
 		A99677AF257C393B00E1281A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99677AE257C393B00E1281A /* ContentView.swift */; };
 		A99677B1257C393C00E1281A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A99677B0257C393C00E1281A /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		A9144E74258081F000767B9E /* DatePickerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerInput.swift; sourceTree = "<group>"; };
+		A9144E792580875C00767B9E /* Choices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choices.swift; sourceTree = "<group>"; };
 		A99677A9257C393B00E1281A /* Questionnaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Questionnaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99677AC257C393B00E1281A /* QuestionnaireApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireApp.swift; sourceTree = "<group>"; };
 		A99677AE257C393B00E1281A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				A99677FC257C4B7E00E1281A /* FieldRow.swift */,
+				A9144E792580875C00767B9E /* Choices.swift */,
 				A9B97F1C257ED72A00992F0E /* FieldTextInput.swift */,
 				A9144E74258081F000767B9E /* DatePickerInput.swift */,
 				A9967804257C4B9C00E1281A /* QuestionnaireView.swift */,
@@ -316,6 +319,7 @@
 				A99677AD257C393B00E1281A /* QuestionnaireApp.swift in Sources */,
 				A9967805257C4B9C00E1281A /* QuestionnaireView.swift in Sources */,
 				A9144E75258081F000767B9E /* DatePickerInput.swift in Sources */,
+				A9144E7A2580875C00767B9E /* Choices.swift in Sources */,
 				A99677E6257C4A3B00E1281A /* Questionnaire.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

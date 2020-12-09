@@ -47,23 +47,25 @@ class Field: Codable, ObservableObject {
     @Published var type: String
     @Published var prompt: String
     @Published var options: Options?
-    @Published var choices: [String]?
+    @Published var choices: [String]
+    @Published var chosen: [Int]
     @Published var date: Date
     @Published var value: String
     @Published var values: [String]?
 
-    init(type: String, prompt: String, options: Options?, choices: [String]?, date: Date, value: String, values: [String]?) {
+    init(type: String, prompt: String, options: Options?, choices: [String], chosen: [Int], date: Date, value: String, values: [String]?) {
         self.type = type
         self.prompt = prompt
         self.options = options
         self.choices = choices
+        self.chosen = chosen
         self.date = date
         self.value = value
         self.values = values
     }
     
     enum CodingKeys: CodingKey {
-        case type, prompt, options, choices, date, value, values
+        case type, prompt, options, choices, chosen, date, value, values
     }
     
     func encode(to encoder: Encoder) throws {
@@ -73,14 +75,12 @@ class Field: Codable, ObservableObject {
         try container.encode(prompt, forKey: .prompt)
         try container.encode(value, forKey: .value)
         try container.encode(date, forKey: .date)
+        try container.encode(chosen, forKey: .chosen)
+        try container.encode(choices, forKey: .choices)
         
         if options != nil {
             try container.encode(options, forKey: .options)
         }
-        if choices != nil {
-            try container.encode(choices, forKey: .choices)
-        }
-
         if values != nil {
             try container.encode(values, forKey: .values)
         }
@@ -101,7 +101,13 @@ class Field: Codable, ObservableObject {
         if container.contains(.choices) {
             choices = try container.decode([String].self, forKey: .choices)
         } else {
-            choices = nil
+            choices = []
+        }
+        
+        if container.contains(.chosen) {
+            chosen = try container.decode([Int].self, forKey: .chosen)
+        } else {
+            chosen = [0]
         }
         
         if container.contains(.date) {
